@@ -15,5 +15,5 @@ Staging:
   <<: *defaults
 
 Production:
-  #approot: "http://www.example.com"
+  approot: "http://pacific-castle-1817.herokuapp.com"
   <<: *defaults
