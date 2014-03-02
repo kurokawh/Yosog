@@ -87,4 +87,5 @@
 
 
 # Heroku configuration that runs your app
-web: ./dist/build/Yosog/Yosog production -p $PORT
+#web: ./dist/build/Yosog/Yosog production -p $PORT
+web: cabal run -- production -p $PORT

@@ -74,9 +74,6 @@ library
                  , wai-logger                    >= 2.1        && < 2.2
 
 executable         Yosog
-    if flag(library-only)
-        Buildable: False
-
     main-is:           main.hs
     hs-source-dirs:    app
     build-depends:     base
