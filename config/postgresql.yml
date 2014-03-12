@@ -20,7 +20,7 @@ Staging:
 
 Production:
   user: nchckjxshuvary
-  password: Yosog
+  password: hJajjyloNHangjtRIubpyAWcl3
   host: ec2-54-204-32-91.compute-1.amazonaws.com
   port: 5432
   database: d8uon41vj1ik0l
