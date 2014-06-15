@@ -137,7 +137,7 @@ instance YesodAuth App where
     authHttpManager = httpManager
 
 instance YesodFacebook App where
-    fbCredentials _ = Facebook.Credentials "Yesod FB Auth Sample" "620098198068547" "b1214edf3187635cedb7d5edcd28834c"
+    fbCredentials _ = Facebook.Credentials "Yesod FB Auth Sample" "012345678901234" "aaaaaaaabbbbbbbbccccccccdddddddd"
     fbHttpManager = httpManager
 
 -- This instance is required to use forms. You can modify renderMessage to
