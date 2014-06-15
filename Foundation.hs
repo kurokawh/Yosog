@@ -4,8 +4,9 @@ import Prelude
 import Yesod
 import Yesod.Static
 import Yesod.Auth
-import Yesod.Auth.BrowserId
-import Yesod.Auth.GoogleEmail
+import Yesod.Facebook (YesodFacebook(..))
+import Yesod.Auth.Facebook.ServerSide
+import Facebook (Credentials(..))
 import Yesod.Default.Config
 import Yesod.Default.Util (addStaticContentExternal)
 import Network.HTTP.Conduit (Manager)
@@ -131,9 +132,13 @@ instance YesodAuth App where
                 fmap Just $ insert $ User (credsIdent creds) Nothing
 
     -- You can add other plugins like BrowserID, email or OAuth here
-    authPlugins _ = [authBrowserId def, authGoogleEmail]
+    authPlugins _ = [authFacebook ["email"]]
 
     authHttpManager = httpManager
+
+instance YesodFacebook App where
+    fbCredentials _ = Facebook.Credentials "Yesod FB Auth Sample" "620098198068547" "b1214edf3187635cedb7d5edcd28834c"
+    fbHttpManager = httpManager
 
 -- This instance is required to use forms. You can modify renderMessage to
 -- achieve customized and internationalized form validation messages.
